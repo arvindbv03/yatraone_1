@@ -28,8 +28,15 @@ export function Image({ src, fill, priority, preload, sizes, width, height, ...p
     srcStr = src.src;
   }
   
-  // Apply basePath
+  // DEBUG: Log the original and modified src
+  const originalSrc = srcStr;
   const finalSrc = assetPath(srcStr);
+  
+  if (originalSrc !== finalSrc) {
+    console.warn("Image wrapper: Modified src from", originalSrc, "to", finalSrc);
+  } else if (originalSrc.includes("/images/")) {
+    console.warn("Image wrapper: assetPath returned same value:", originalSrc);
+  }
   
   // For fill images, use absolute positioning
   if (fill) {
@@ -60,6 +67,7 @@ export function Image({ src, fill, priority, preload, sizes, width, height, ...p
     />
   );
 }
+
 
 
 
