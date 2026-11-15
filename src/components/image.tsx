@@ -1,3 +1,5 @@
+"use client";
+
 import { HTMLAttributes } from "react";
 import { assetPath } from "@/lib/paths";
 
@@ -67,6 +69,7 @@ export function Image({ src, fill, priority, preload, sizes, width, height, ...p
     />
   );
 }
+
 
 
 
