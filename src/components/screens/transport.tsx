@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import {
   Accessibility,
@@ -213,12 +212,10 @@ export function TransportScreen({
                 >
                   <div className="grid sm:grid-cols-[210px_1fr]">
                     <div className="relative h-44 sm:h-full sm:min-h-[220px]">
-                      <Image
+                      <img
                         src={VEHICLE_IMAGES[entry.id] ?? "/images/car-1.jpg"}
                         alt={`${entry.name} vehicle`}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 210px"
-                        className={cn("object-cover", incompatible && "grayscale")}
+                        className={cn("absolute inset-0 h-full w-full object-cover", incompatible && "grayscale")}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/35 to-transparent" />
                       {entry.recommendedForMobility && (
@@ -349,12 +346,10 @@ export function TransportScreen({
               </div>
               <div className="mt-3 overflow-hidden rounded-2xl border border-sand/70">
                 <div className="relative h-32">
-                  <Image
+                  <img
                     src={VEHICLE_IMAGES[vehicle.id] ?? "/images/car-1.jpg"}
                     alt={vehicle.name}
-                    fill
-                    sizes="320px"
-                    className="object-cover"
+                    className="absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="photo-tint absolute inset-0" />
                   <div className="absolute inset-x-3 bottom-2.5">
@@ -486,13 +481,11 @@ export function TransportScreen({
         {detail && (
           <div>
             <div className="relative h-44 overflow-hidden rounded-2xl">
-              <Image
+              <img
                 src={VEHICLE_IMAGES[detail.id] ?? "/images/car-1.jpg"}
                 alt={detail.name}
-                fill
-                sizes="(max-width: 640px) 100vw, 480px"
                 className={cn(
-                  "object-cover",
+                  "absolute inset-0 h-full w-full object-cover",
                   mobilityRequested && !detail.accessible && "grayscale",
                 )}
               />

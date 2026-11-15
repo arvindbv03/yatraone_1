@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -74,12 +73,10 @@ function BookingCard({
     <article className="overflow-hidden rounded-[26px] border border-sand bg-paper transition hover:border-forest/20">
       <div className="grid md:grid-cols-[205px_1fr]">
         <div className="relative h-44 md:h-full md:min-h-[260px]">
-          <Image
+          <img
             src={assetPath(first?.image ?? "/images/tirupati-alt.jpg")}
             alt={first?.imageAlt ?? "Temple on your yatra route"}
-            fill
-            sizes="(max-width: 768px) 100vw, 205px"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
           <div className="photo-tint absolute inset-0" />
           <div className="absolute inset-x-3 bottom-3">

@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   Accessibility,
   ArrowRight,
@@ -144,13 +143,10 @@ export function HomeScreen({
             className="animate-fade-up relative min-h-[420px] overflow-hidden rounded-[30px] bg-forest sm:min-h-[480px] lg:min-h-[610px]"
             style={{ animationDelay: "100ms" }}
           >
-            <Image
+            <img
               src={assetPath("/images/madurai.jpg")}
               alt="The intricately painted south gopuram of Meenakshi Amman Temple, Madurai"
-              fill
-              preload
-              sizes="(max-width: 1024px) 100vw, 48vw"
-              className="object-cover object-[center_42%]"
+              className="absolute inset-0 h-full w-full object-cover object-[center_42%]"
             />
             <div className="absolute inset-0 hero-gradient" />
             <div className="absolute left-5 top-5 flex flex-wrap gap-2 sm:left-6 sm:top-6">
@@ -272,12 +268,10 @@ export function HomeScreen({
               style={{ animationDelay: `${index * 80}ms` }}
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image
-                  src={circuit.image}
+                <img
+                  src={assetPath(circuit.image)}
                   alt={circuit.imageAlt}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition duration-700 group-hover:scale-[1.035]"
+                  className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]"
                 />
                 <div className="absolute inset-0 photo-tint opacity-80" />
                 <div className="absolute left-4 top-4">
