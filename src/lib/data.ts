@@ -29,7 +29,7 @@ export const DESTINATIONS: Destination[] = [
       "Temple hours are generally 2:30 AM – 11:30 PM. Darshan slots change daily and are never guaranteed.",
     rating: 4.9,
     reviewCount: 18420,
-    image: "/images/tirupati-alt.jpg",
+    image: "/yatraone_1/images/tirupati-alt.jpg",
     imageAlt: "The white gopuram of Sri Venkateswara Temple against the green Tirumala hills",
     accessibility: [
       "Step-free route to select darshan queues",
@@ -71,7 +71,7 @@ export const DESTINATIONS: Destination[] = [
       "Typical hours are 6:00 AM – 9:00 PM. Festival days can shift darshan timings.",
     rating: 4.7,
     reviewCount: 6420,
-    image: "/images/srikalahasti.jpg",
+    image: "/yatraone_1/images/srikalahasti.jpg",
     imageAlt: "The tall white gopuram of Srikalahasti temple above the town and river",
     accessibility: [
       "Mostly level outer courtyard",
@@ -108,7 +108,7 @@ export const DESTINATIONS: Destination[] = [
       "Typical hours are 4:00 AM – 9:30 PM. Timings change during festival weeks.",
     rating: 4.7,
     reviewCount: 5100,
-    image: "/images/kanipakam.jpg",
+    image: "/yatraone_1/images/kanipakam.jpg",
     imageAlt: "Kanipakam temple gopuram lit at night",
     accessibility: [
       "Level entry to the main courtyard",
@@ -145,7 +145,7 @@ export const DESTINATIONS: Destination[] = [
       "Typical hours are 5:00 AM – 10:00 PM. The museum and some halls keep shorter hours.",
     rating: 4.9,
     reviewCount: 22600,
-    image: "/images/madurai.jpg",
+    image: "/yatraone_1/images/madurai.jpg",
     imageAlt: "Detailed painted gopuram of Meenakshi Amman Temple in Madurai",
     accessibility: [
       "Outer corridors are largely level",
@@ -182,7 +182,7 @@ export const DESTINATIONS: Destination[] = [
       "Temple hours are generally 5:00 AM – 9:00 PM. Theertham rituals have separate timings.",
     rating: 4.8,
     reviewCount: 15200,
-    image: "/images/rameswaram-temple.jpg",
+    image: "/yatraone_1/images/rameswaram-temple.jpg",
     imageAlt: "Golden gopuram of Ramanathaswamy Temple, Rameswaram",
     accessibility: [
       "Long walking distances within the temple",
@@ -219,7 +219,7 @@ export const DESTINATIONS: Destination[] = [
       "Daylight visits only. Local authorities may close the road because of weather or sea conditions.",
     rating: 4.6,
     reviewCount: 8600,
-    image: "/images/dhanushkodi.jpg",
+    image: "/yatraone_1/images/dhanushkodi.jpg",
     imageAlt: "A car on the coastal road at Dhanushkodi at sunset",
     accessibility: [
       "Vehicle-accessible viewpoints",
@@ -256,7 +256,7 @@ export const DESTINATIONS: Destination[] = [
       "Typical hours are 6:00 AM – 12:30 PM and 4:00 PM – 8:30 PM. Timings may change on festival days.",
     rating: 4.8,
     reviewCount: 9400,
-    image: "/images/thanjavur.jpg",
+    image: "/yatraone_1/images/thanjavur.jpg",
     imageAlt: "The carved stone gateway of Brihadeeswarar Temple in Thanjavur",
     accessibility: [
       "Level forecourt and wide paths",
@@ -293,7 +293,7 @@ export const DESTINATIONS: Destination[] = [
       "Typical hours are 6:00 AM – 12:30 PM and 4:00 PM – 8:30 PM. Individual temples vary.",
     rating: 4.7,
     reviewCount: 7800,
-    image: "/images/kanchipuram.jpg",
+    image: "/yatraone_1/images/kanchipuram.jpg",
     imageAlt: "Kailasanathar Temple in Kanchipuram with carved stone walls",
     accessibility: [
       "Mostly level temple compounds",
@@ -330,7 +330,7 @@ export const DESTINATIONS: Destination[] = [
       "Typical hours are 6:00 AM – 12:00 PM and 5:00 PM – 10:00 PM. The main ritual timings vary.",
     rating: 4.8,
     reviewCount: 10100,
-    image: "/images/chidambaram.jpg",
+    image: "/yatraone_1/images/chidambaram.jpg",
     imageAlt: "The ornate gopuram of Thillai Nataraja Temple in Chidambaram",
     accessibility: [
       "Level entry and wide outer courtyard",
@@ -370,7 +370,7 @@ export const CIRCUITS: Circuit[] = [
     tagline: "Madurai · Rameswaram · Dhanushkodi",
     blurb:
       "Painted gopurams, long temple corridors and the road that ends in the ocean.",
-    image: "/images/madurai.jpg",
+    image: "/yatraone_1/images/madurai.jpg",
     imageAlt: "The painted gopuram of Meenakshi Amman Temple",
     days: 5,
     nights: 4,
@@ -384,7 +384,7 @@ export const CIRCUITS: Circuit[] = [
     tagline: "Thanjavur · Chidambaram · Kanchipuram",
     blurb:
       "Stone, bronze and living ritual across the great temple towns of Tamil Nadu.",
-    image: "/images/thanjavur.jpg",
+    image: "/yatraone_1/images/thanjavur.jpg",
     imageAlt: "The stone gateway of Brihadeeswarar Temple",
     days: 5,
     nights: 4,
@@ -403,7 +403,7 @@ export const HOTELS: Hotel[] = [
     rating: 4.8,
     reviews: 1284,
     pricePerNightPaise: 640000,
-    image: "/images/hotel-3.jpg",
+    image: "/yatraone_1/images/hotel-3.jpg",
     imageAlt: "A calm hotel pool and courtyard at dusk",
     roomType: "Deluxe twin · 2 rooms",
     breakfast: true,
@@ -420,7 +420,7 @@ export const HOTELS: Hotel[] = [
     rating: 4.6,
     reviews: 862,
     pricePerNightPaise: 420000,
-    image: "/images/hotel-4.jpg",
+    image: "/yatraone_1/images/hotel-4.jpg",
     imageAlt: "A warm, contemporary hotel bedroom with twin beds",
     roomType: "Comfort twin · 2 rooms",
     breakfast: true,
@@ -437,7 +437,7 @@ export const HOTELS: Hotel[] = [
     rating: 4.3,
     reviews: 414,
     pricePerNightPaise: 120000,
-    image: "/images/hotel-2.jpg",
+    image: "/yatraone_1/images/hotel-2.jpg",
     imageAlt: "A simple, sunlit bedroom with a double bed",
     roomType: "Family room · 2 rooms",
     breakfast: false,

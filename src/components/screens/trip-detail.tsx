@@ -212,7 +212,7 @@ export function TripDetailScreen({
               <section className="overflow-hidden rounded-[26px] border border-sand bg-paper">
                 <div className="relative h-52 sm:h-64">
                   <Image
-                    src={first?.image ?? "/images/tirupati-alt.jpg"}
+                    src={first?.image ?? "/yatraone_1/images/tirupati-alt.jpg"}
                     alt={first?.imageAlt ?? "Temple on your yatra route"}
                     fill
                     sizes="(max-width: 1024px) 100vw, 800px"

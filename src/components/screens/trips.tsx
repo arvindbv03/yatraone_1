@@ -74,7 +74,7 @@ function BookingCard({
       <div className="grid md:grid-cols-[205px_1fr]">
         <div className="relative h-44 md:h-full md:min-h-[260px]">
           <Image
-            src={first?.image ?? "/images/tirupati-alt.jpg"}
+            src={first?.image ?? "/yatraone_1/images/tirupati-alt.jpg"}
             alt={first?.imageAlt ?? "Temple on your yatra route"}
             fill
             sizes="(max-width: 768px) 100vw, 205px"

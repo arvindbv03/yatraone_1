@@ -143,7 +143,7 @@ export function HomeScreen({
             style={{ animationDelay: "100ms" }}
           >
             <Image
-              src={"/images/madurai.jpg"}
+              src={"/yatraone_1/images/madurai.jpg"}
               alt="The intricately painted south gopuram of Meenakshi Amman Temple, Madurai"
               fill
               priority
