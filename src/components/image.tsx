@@ -12,6 +12,7 @@ export function Image(props: ImageProps) {
   // Only apply assetPath to string paths, not to static imports
   if (typeof src === "string") {
     src = assetPath(src);
+    console.log("Image wrapper applied assetPath:", { original: props.src, modified: src });
   }
   
   return (
@@ -21,5 +22,6 @@ export function Image(props: ImageProps) {
     />
   );
 }
+
 
 
