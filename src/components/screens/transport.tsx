@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import {
   Accessibility,
@@ -24,12 +25,11 @@ import { roadEstimate } from "@/lib/itinerary";
 import { calculateQuote } from "@/lib/pricing";
 import type { TripConfig, Vehicle } from "@/lib/types";
 import { BackButton, Divider, Eyebrow, PriceLine, Sheet, Tag } from "@/components/ui";
-import { assetPath } from "@/lib/paths";
 
 const VEHICLE_IMAGES: Record<string, string> = {
-  innova: assetPath("/images/car-1.jpg"),
-  urbania: assetPath("/images/bus-1.jpg"),
-  tempo: assetPath("/images/bus-1.jpg"),
+  innova: "/images/car-1.jpg",
+  urbania: "/images/bus-1.jpg",
+  tempo: "/images/bus-1.jpg",
 };
 
 const INCLUDED = [
@@ -212,10 +212,12 @@ export function TransportScreen({
                 >
                   <div className="grid sm:grid-cols-[210px_1fr]">
                     <div className="relative h-44 sm:h-full sm:min-h-[220px]">
-                      <img
+                      <Image
                         src={VEHICLE_IMAGES[entry.id] ?? "/images/car-1.jpg"}
                         alt={`${entry.name} vehicle`}
-                        className={cn("absolute inset-0 h-full w-full object-cover", incompatible && "grayscale")}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 210px"
+                        className={cn("object-cover", incompatible && "grayscale")}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/35 to-transparent" />
                       {entry.recommendedForMobility && (
@@ -346,10 +348,12 @@ export function TransportScreen({
               </div>
               <div className="mt-3 overflow-hidden rounded-2xl border border-sand/70">
                 <div className="relative h-32">
-                  <img
+                  <Image
                     src={VEHICLE_IMAGES[vehicle.id] ?? "/images/car-1.jpg"}
                     alt={vehicle.name}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fill
+                    sizes="320px"
+                    className="object-cover"
                   />
                   <div className="photo-tint absolute inset-0" />
                   <div className="absolute inset-x-3 bottom-2.5">
@@ -481,11 +485,13 @@ export function TransportScreen({
         {detail && (
           <div>
             <div className="relative h-44 overflow-hidden rounded-2xl">
-              <img
+              <Image
                 src={VEHICLE_IMAGES[detail.id] ?? "/images/car-1.jpg"}
                 alt={detail.name}
+                fill
+                sizes="(max-width: 640px) 100vw, 480px"
                 className={cn(
-                  "absolute inset-0 h-full w-full object-cover",
+                  "object-cover",
                   mobilityRequested && !detail.accessible && "grayscale",
                 )}
               />

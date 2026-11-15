@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import {
   Accessibility,
@@ -36,7 +37,6 @@ import {
 import { buildItinerary, routeLabel } from "@/lib/itinerary";
 import type { Booking, VendorStatus } from "@/lib/types";
 import { BackButton, Divider, Eyebrow, PriceLine, Tag } from "@/components/ui";
-import { assetPath } from "@/lib/paths";
 import { CareTags, DayTabs, DayTimeline } from "@/components/itinerary-view";
 import { RouteMap } from "@/components/route-map";
 
@@ -211,10 +211,12 @@ export function TripDetailScreen({
             <div className="space-y-4">
               <section className="overflow-hidden rounded-[26px] border border-sand bg-paper">
                 <div className="relative h-52 sm:h-64">
-                  <img
-                    src={assetPath(first?.image ?? "/images/tirupati-alt.jpg")}
+                  <Image
+                    src={first?.image ?? "/images/tirupati-alt.jpg"}
                     alt={first?.imageAlt ?? "Temple on your yatra route"}
-                    className="absolute inset-0 h-full w-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 800px"
+                    className="object-cover"
                   />
                   <div className="hero-gradient absolute inset-0" />
                   <div className="absolute inset-x-5 bottom-4 text-white sm:inset-x-6">
