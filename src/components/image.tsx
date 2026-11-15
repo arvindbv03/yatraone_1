@@ -1,27 +1,67 @@
-import NextImage, { ImageProps } from "next/image";
+import { HTMLAttributes } from "react";
 import { assetPath } from "@/lib/paths";
 
 /**
- * Custom Image wrapper that applies basePath to src
- * This fixes the issue where Next.js Image with unoptimized: true
+ * Custom Image component that renders plain <img> tags with basePath applied
+ * This works around the issue where Next.js Image with unoptimized: true
  * doesn't apply basePath to the src attribute
  */
-export function Image(props: ImageProps) {
-  let src = props.src;
-  
-  // Only apply assetPath to string paths, not to static imports
+interface ImageProps extends HTMLAttributes<HTMLImageElement> {
+  src: string | { src: string; width?: number; height?: number };
+  alt: string;
+  fill?: boolean;
+  priority?: boolean;
+  preload?: boolean;
+  sizes?: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export function Image({ src, fill, priority, preload, sizes, width, height, ...props }: ImageProps) {
+  // Handle both string and object src formats
+  let srcStr: string;
   if (typeof src === "string") {
-    src = assetPath(src);
-    console.log("Image wrapper applied assetPath:", { original: props.src, modified: src });
+    srcStr = src;
+  } else {
+    srcStr = src.src;
   }
   
+  // Apply basePath
+  const finalSrc = assetPath(srcStr);
+  
+  // For fill images, use absolute positioning
+  if (fill) {
+    return (
+      <img
+        {...props}
+        src={finalSrc}
+        alt={props.alt || "Image"}
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          ...props.style
+        }}
+      />
+    );
+  }
+  
+  // Regular image with explicit dimensions
   return (
-    <NextImage
+    <img
       {...props}
-      src={src}
+      src={finalSrc}
+      alt={props.alt || "Image"}
+      width={width}
+      height={height}
     />
   );
 }
+
+
 
 
 
