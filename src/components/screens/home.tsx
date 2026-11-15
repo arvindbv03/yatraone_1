@@ -19,6 +19,7 @@ import { CIRCUITS, DESTINATIONS } from "@/lib/data";
 import { formatDateRange, formatINR, nightsLabel } from "@/lib/format";
 import type { Circuit, Screen, TripConfig } from "@/lib/types";
 import { Eyebrow, Stars, Tag } from "@/components/ui";
+import { assetPath } from "@/lib/paths";
 
 export function HomeScreen({
   trip,
@@ -144,7 +145,7 @@ export function HomeScreen({
             style={{ animationDelay: "100ms" }}
           >
             <Image
-              src="/images/madurai.jpg"
+              src={assetPath("/images/madurai.jpg")}
               alt="The intricately painted south gopuram of Meenakshi Amman Temple, Madurai"
               fill
               preload

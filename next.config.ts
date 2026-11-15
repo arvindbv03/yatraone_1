@@ -21,4 +21,9 @@ const nextConfig: NextConfig = {
   },
 };
 
+// Export basePath as public env var for client-side access
+if (process.env.BASE_PATH) {
+  process.env.NEXT_PUBLIC_BASE_PATH = process.env.BASE_PATH;
+}
+
 export default nextConfig;

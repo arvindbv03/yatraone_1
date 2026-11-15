@@ -28,6 +28,7 @@ import {
   travellersLabel,
 } from "@/lib/format";
 import type { Booking, Quote, TripConfig } from "@/lib/types";
+import { assetPath } from "@/lib/paths";
 import { Divider, EmptyState, Eyebrow, Tag } from "@/components/ui";
 import { CareTags } from "@/components/itinerary-view";
 import { RouteMap } from "@/components/route-map";
@@ -74,7 +75,7 @@ function BookingCard({
       <div className="grid md:grid-cols-[205px_1fr]">
         <div className="relative h-44 md:h-full md:min-h-[260px]">
           <Image
-            src={first?.image ?? "/images/tirupati-alt.jpg"}
+            src={assetPath(first?.image ?? "/images/tirupati-alt.jpg")}
             alt={first?.imageAlt ?? "Temple on your yatra route"}
             fill
             sizes="(max-width: 768px) 100vw, 205px"

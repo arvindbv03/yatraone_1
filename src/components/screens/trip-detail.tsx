@@ -37,6 +37,7 @@ import {
 import { buildItinerary, routeLabel } from "@/lib/itinerary";
 import type { Booking, VendorStatus } from "@/lib/types";
 import { BackButton, Divider, Eyebrow, PriceLine, Tag } from "@/components/ui";
+import { assetPath } from "@/lib/paths";
 import { CareTags, DayTabs, DayTimeline } from "@/components/itinerary-view";
 import { RouteMap } from "@/components/route-map";
 
@@ -212,7 +213,7 @@ export function TripDetailScreen({
               <section className="overflow-hidden rounded-[26px] border border-sand bg-paper">
                 <div className="relative h-52 sm:h-64">
                   <Image
-                    src={first?.image ?? "/images/tirupati-alt.jpg"}
+                    src={assetPath(first?.image ?? "/images/tirupati-alt.jpg")}
                     alt={first?.imageAlt ?? "Temple on your yatra route"}
                     fill
                     sizes="(max-width: 1024px) 100vw, 800px"

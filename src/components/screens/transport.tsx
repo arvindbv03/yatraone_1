@@ -25,11 +25,12 @@ import { roadEstimate } from "@/lib/itinerary";
 import { calculateQuote } from "@/lib/pricing";
 import type { TripConfig, Vehicle } from "@/lib/types";
 import { BackButton, Divider, Eyebrow, PriceLine, Sheet, Tag } from "@/components/ui";
+import { assetPath } from "@/lib/paths";
 
 const VEHICLE_IMAGES: Record<string, string> = {
-  innova: "/images/car-1.jpg",
-  urbania: "/images/bus-1.jpg",
-  tempo: "/images/bus-1.jpg",
+  innova: assetPath("/images/car-1.jpg"),
+  urbania: assetPath("/images/bus-1.jpg"),
+  tempo: assetPath("/images/bus-1.jpg"),
 };
 
 const INCLUDED = [
